@@ -307,6 +307,9 @@
                 <button class="secondary-btn" onclick="generateWorkflow()">
                     Regenerate
                 </button>
+      <button id="monitorBtn" class="secondary-btn" onclick="startMonitoring()" style="display:none;">
+    Start Monitoring
+</button>
             </div>
         </section>
 
@@ -393,7 +396,15 @@ function approveWorkflow() {
 
     document.getElementById("monitorBtn").style.display = "inline-block";
 }
+function startMonitoring() {
 
+    document.getElementById("resultStatus").textContent =
+        "Monitoring in progress";
+
+    updateProgress(4);
+
+    document.getElementById("monitorBtn").style.display = "none";
+}
 
 function editWorkflow() {
 
