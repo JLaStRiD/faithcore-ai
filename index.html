@@ -407,8 +407,17 @@ function startMonitoring() {
     updateProgress(4);
 
     document.getElementById("monitorBtn").style.display = "none";
+document.getElementById("closeBtn").style.display = "inline-block";
 }
+function closeWorkflow() {
 
+    document.getElementById("resultStatus").textContent =
+        "Workflow completed";
+
+    updateProgress(5);
+
+    document.getElementById("closeBtn").style.display = "none";
+}
 function editWorkflow() {
 
     document.getElementById("resultStatus").textContent =
