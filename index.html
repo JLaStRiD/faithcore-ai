@@ -389,8 +389,9 @@ function approveWorkflow() {
 
     document.getElementById("resultStatus").textContent =
         "Approved for execution — Monitoring ready";
-
     updateProgress(3);
+
+    document.getElementById("monitorBtn").style.display = "inline-block";
 }
 
 
